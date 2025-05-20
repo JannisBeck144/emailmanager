@@ -1,0 +1,254 @@
+
+    #braunertext { 
+        color: saddlebrown;
+        text-decoration: none;
+    }
+    .bold { font-weight:bold }
+
+    /* Allgemeines Styling */
+body {
+    font-family: "Verdana", sans-serif;
+    background-color: #f4e9d8; /* Retro-Beige-Hintergrund */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation */
+.retro-nav {
+    background-color: #d17b49; /* Retro-Orange */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.retro-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.retro-nav a {
+    font-family: Bookman Old Style;
+    text-decoration: none;
+    color: #fff; /* Weiße Schriftfarbe */
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.retro-nav a:hover {
+    background-color: #f4e9d8;
+    color: #d17b49;
+    border: 2px solid #d17b49;
+    border-radius: 4px;
+}
+
+/* Hauptinhalt */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Überschriften */
+h1 {
+    text-align: center;
+    color: #d17b49; /* Retro-Orange */
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+/* Container mit transparentem Hintergrundbild */
+.content-container {
+    position: relative; /* Damit wir das Pseudoelement über dem Container positionieren können */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden; /* Verhindert das Überlaufen von Inhalten */
+    z-index: 1; /* Stellt sicher, dass der Container über dem Hintergrundbild bleibt */
+    box-shadow: 2px 1px 8px 4px #ccc;
+}
+
+/* Hintergrundbild als halbtransparentes Overlay */
+.content-container::before {
+    content: ""; /* Leeres Pseudoelement */
+    position: absolute; /* Damit es hinter dem Inhalt angezeigt wird */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Hintergrung.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Halbtransparenz für das Hintergrundbild */
+    z-index: -1; /* Damit es hinter dem Text bleibt */
+    
+}
+
+
+.content-left {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+    
+.content-right img {
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #d17b49; 
+    border-radius: 50%;
+    transform: translateX(-25px);
+}
+
+/* Tabelle - Allgemein */
+.info-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #794c35; 
+    box-shadow: 2px 1px 8px 4px #ccc; 
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Tabellenüberschriften */
+.info-table .table-heading {
+    background-color: #d17b49; /* Retro-Orange */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Tabellenzellen */
+.info-table th,
+.info-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+/* Kopfzeilen (th) */
+.info-table th {
+    background-color: #f4e9d8; /* Retro-Beige */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Bildergalerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Abstand zwischen den Bildern */
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fff; /* Weißer Hintergrund */
+    padding: 20px;
+    box-shadow: 2px 1px 8px 4px #ccc; /* Retro-Schatten */
+}
+
+/* Galerie-Bilder */
+.gallery img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; /* Bilder proportional zuschneiden */
+    border: 2px solid #d17b49; /* Rahmen */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover-Effekt für Bilder */
+.gallery img:hover {
+    transform: scale(1.1); /* Bild vergrößern */
+    box-shadow: 4px 4px 0 #794c35; /* Retro-Schatten */
+    border-color: #794c35; /* Rahmenfarbe ändern */
+}
+
+/* Spezielles Styling für Portrait */
+.gallery .portrait {
+    width: 467px;
+    height: 700px;
+    object-fit: contain;
+    border: 2px solid #d17b49; /* Auffälliger Rahmen für Portrait */
+    margin-top: 10px;
+}
+/* Video-Galerie */
+.video-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Abstand zwischen Videos */
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fff; /* Weißer Hintergrund */
+    padding: 20px;
+    border:none;
+    box-shadow: 2px 1px 8px 4px #ccc; /* Retro-Schatten */
+}
+
+/* Videos */
+.video-gallery iframe {
+    border: 3px solid #794c35; /* Retro-Rahmen um Videos */
+    box-shadow: 4px 4px 0 #ccc; /* Schatten für Videos */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover-Effekt für Videos */
+.video-gallery iframe:hover {
+    transform: scale(1.02); /* Leicht vergrößern */
+    box-shadow: 6px 6px 0 #794c35; /* Schatten verstärken */
+}
+
+/* Button-Container */
+.button-container {
+    text-align: center;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    box-shadow: 2px 1px 8px 4px #ccc;
+    max-width: 600px;
+}
+
+/* Button */
+.button-container button {
+    background-color: #794c35;
+    color: #fff;
+    border: 3px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button Hover */
+.button-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 0 #794c35;
+}
+
+/* Klick-Anzeige */
+.button-container p {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
